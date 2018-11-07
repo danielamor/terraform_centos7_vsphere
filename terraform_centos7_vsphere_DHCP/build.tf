@@ -62,13 +62,7 @@ resource "vsphere_virtual_machine" "${var.hostname}" {
         domain    = "${var.domain}"
       }
 
-      network_interface {
-        ipv4_address = "${var.ip_address}"
-        ipv4_netmask = "${var.netmask}"
-      }
-
-      ipv4_gateway = "${var.gateway}"
-      dns_server_list = ["${var.dns1}", "${var.dns2}"]
+      network_interface { }
     }
   }
   provisioner "file" {
